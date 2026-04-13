@@ -9,7 +9,9 @@ export function SiteProvider({ children }) {
   useEffect(() => {
     async function fetchSiteData() {
       try {
-        const response = await fetch("/web-data.json");
+        const response = await fetch(
+          `${import.meta.env.BASE_URL}web-data.json`,
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch site data");
         }
