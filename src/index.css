@@ -1,42 +1,6 @@
 @import "./fonts.css";
 @import "tailwindcss";
-
-@theme {
-  --color-brand-blue: #0c2d6b;
-  --color-brand-blue-hover: #1f4a94;
-  --color-brand-surface: #faf8f5;
-}
-
-@layer base {
-  body {
-    font-family: "Inter", serif;
-    background: var(--color-brand-surface);
-    color: var(--color-brand-blue);
-  }
-
-  address {
-    @apply not-italic;
-  }
-
-  a {
-    @apply underline;
-  }
-
-  a:hover,
-  a:focus-visible {
-    @apply no-underline;
-  }
-}
-
-@layer section-inner-container {
-  /* Utility class for max width and horizontal padding, used across multiple components. */
-
-  .section-container {
-    &.hero {
-    }
-  }
-
-  .section-inner-container {
-    @apply max-w-7xl w-full px-12;
-  }
-}
+@import "./styles/theme.css";
+@import "./styles/base.css";
+@import "./styles/components.css";
+@import "./styles/utilities.css";

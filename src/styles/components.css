@@ -1,0 +1,15 @@
+/* This file defines custom component styles using Tailwind's @layer directive. */
+@layer components {
+  .cta {
+    /* Base styles for the call-to-action button. */
+    @apply py-3 px-6 rounded-md duration-300;
+  }
+
+  .cta--primary {
+    @apply bg-brand-blue text-white hover:bg-brand-blue-hover;
+  }
+
+  .cta--secondary {
+    @apply bg-transparent border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white;
+  }
+}

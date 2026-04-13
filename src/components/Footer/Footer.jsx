@@ -71,10 +71,19 @@ function Footer() {
         </div>
         <div className="footer_address col-span-full sm:col-span-1">
           <h5 className="footer__heading text-2xl font-bold mb-1.5 text-brand">
-            Column 3
+            Quick Links
           </h5>
+          <nav aria-label="Footer quick links" className="mb-3">
+            <ul className="space-y-1.5">
+              <li>
+                <a href="#contact" className="hover:underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div className="col-span-full text-center">
+        <div className="col-span-full text-center border-t border-white/10 pt-12">
           <p>
             Copyright © {new Date().getFullYear()} Canvey Foot Clinic. All
             rights reserved.

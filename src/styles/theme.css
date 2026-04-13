@@ -1,0 +1,6 @@
+/* Sets theme colors for the application. */
+@theme {
+  --color-brand-blue: #0c2d6b;
+  --color-brand-blue-hover: #1f4a94;
+  --color-brand-surface: #faf8f5;
+}

@@ -1,0 +1,21 @@
+/* Base styles for the application, including typography and global element styles. */
+@layer base {
+  body {
+    font-family: "Inter", serif;
+    background: var(--color-brand-surface);
+    color: var(--color-brand-blue);
+  }
+
+  address {
+    @apply not-italic;
+  }
+
+  a {
+    @apply underline;
+  }
+
+  a:hover,
+  a:focus-visible {
+    @apply no-underline;
+  }
+}
