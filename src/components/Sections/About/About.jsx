@@ -1,5 +1,6 @@
 import { useSiteContent } from "../../../hooks/useSiteContent";
 import Section from "../Section/Section";
+import Card from "../../Card/Card";
 
 function About() {
   const { getSectionByName } = useSiteContent();
