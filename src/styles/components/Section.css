@@ -12,7 +12,7 @@
   }
 
   .section__text {
-    @apply text-sm sm:text-base md:text-lg mb-8 text-brand-blue;
+    @apply mb-8 text-brand-blue;
   }
 
   .section--dark .section__text {

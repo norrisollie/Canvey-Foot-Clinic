@@ -4,15 +4,15 @@
   }
 
   .about__block-lead {
-    @apply text-sm sm:text-base md:text-lg mb-8 text-brand-blue text-lg font-medium;
+    @apply mb-8 text-brand-blue font-medium;
   }
 
   .about__block-body {
-    @apply text-sm sm:text-base md:text-lg mb-8 text-brand-blue;
+    @apply mb-8 text-brand-blue;
   }
 
   .about__owners-title {
-    @apply text-2xl sm:text-3xl font-semibold mb-6 text-brand-blue;
+    @apply text-2xl font-semibold mb-6 text-brand-blue;
   }
 
   .about__owner-card {
