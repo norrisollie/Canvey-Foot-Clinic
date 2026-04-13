@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main] # Build on pushes to main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Use latest Ubuntu for the runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Get your repo code
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # Use Node 20 (current LTS)
+          cache: "npm" # Cache npm deps for faster builds
+
+      - name: Install dependencies
+        run: npm ci # Install deps exactly as in package-lock.json
+
+      - name: Build app
+        run: npm run build # Run the build script from package.json
+        env:
+          VITE_PUBLIC_BASE: /Canvey-Foot-Clinic/ # Set base path for GitHub Pages
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist # Upload the built dist folder
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build # Wait for build job to finish
+
+    permissions:
+      pages: write # Allow writing to Pages
+      id-token: write # Allow ID token for secure deploys
+
+    environment:
+      name: github-pages # Use the Pages environment
+      url: ${{ steps.deployment.outputs.page_url }} # Get the deploy URL
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # Official deploy action

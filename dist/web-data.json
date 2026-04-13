@@ -1,0 +1,304 @@
+[
+  {
+    "global": {
+      "siteName": "Canvey Foot Clinic",
+      "phone": "01268 683280",
+      "email": "enquiries@canveyfootclinic.co.uk",
+      "bookingLink": "#contact",
+      "address": {
+        "line1": "82 High Street",
+        "line2": "",
+        "town": "Canvey Island",
+        "county": "Essex",
+        "postcode": "SS8 7SQ"
+      },
+      "openingHours": [
+        {
+          "day": "Monday",
+          "isClosed": false,
+          "open": "9am",
+          "close": "5pm"
+        },
+        {
+          "day": "Tuesday",
+          "isClosed": false,
+          "open": "9am",
+          "close": "5pm"
+        },
+        {
+          "day": "Wednesday",
+          "isClosed": false,
+          "open": "9am",
+          "close": "5pm"
+        },
+        {
+          "day": "Thursday",
+          "isClosed": false,
+          "open": "9am",
+          "close": "5pm"
+        },
+        {
+          "day": "Friday",
+          "isClosed": false,
+          "open": "9am",
+          "close": "5pm"
+        },
+        {
+          "day": "Saturday",
+          "isClosed": true,
+          "open": "",
+          "close": ""
+        },
+        {
+          "day": "Sunday",
+          "isClosed": true,
+          "open": "",
+          "close": ""
+        }
+      ],
+      "socialLinks": [
+        {
+          "label": "Facebook",
+          "href": "https://facebook.com"
+        },
+        {
+          "label": "Instagram",
+          "href": "https://instagram.com"
+        }
+      ]
+    },
+    "layout": {
+      "contactBar": {
+        "content": {
+          "items": ["phone", "email", "address"]
+        }
+      },
+      "header": {
+        "meta": {
+          "name": "header",
+          "id": "header",
+          "element": "header"
+        },
+        "content": {
+          "logo": {
+            "src": "/images/logo.svg",
+            "alt": "Canvey Foot Clinic logo"
+          }
+        }
+      },
+      "footer": {
+        "meta": {
+          "name": "footer",
+          "id": "footer",
+          "element": "footer"
+        },
+        "content": {
+          "columns": [
+            {
+              "title": "Contact",
+              "items": [
+                {
+                  "label": "01268 683280",
+                  "href": "tel:01268683280"
+                },
+                {
+                  "label": "enquiries@canveyfootclinic.co.uk",
+                  "href": "mailto:enquiries@canveyfootclinic.co.uk"
+                }
+              ]
+            },
+            {
+              "title": "Opening Hours",
+              "source": "openingHours"
+            },
+            {
+              "title": "Follow",
+              "items": [
+                {
+                  "label": "Facebook",
+                  "href": "https://facebook.com"
+                },
+                {
+                  "label": "Instagram",
+                  "href": "https://instagram.com"
+                }
+              ]
+            },
+            {
+              "title": "Copyright",
+              "text": "© 2026 Canvey Foot Clinic. All rights reserved...."
+            }
+          ]
+        }
+      }
+    },
+    "sections": [
+      {
+        "meta": {
+          "name": "hero",
+          "id": "home",
+          "showInNav": true,
+          "navLabel": "Home"
+        },
+        "content": {
+          "title": "Comfortable feet\nstart here.",
+          "subtitle": "Professional foot health care on Canvey from experienced foot health. practitioners.",
+          "ctas": [
+            {
+              "label": "Book Appointment",
+              "href": "#contact"
+            },
+            {
+              "label": "View Services",
+              "href": "#services"
+            }
+          ],
+          "image": {
+            "src": "/images/hero/hero-image.jpg",
+            "alt": "Foot health practitioner with patient"
+          }
+        }
+      },
+      {
+        "meta": {
+          "name": "about",
+          "id": "about",
+          "showInNav": true,
+          "navLabel": "About Us"
+        },
+        "content": {
+          "title": "About Us",
+          "text": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "variant": "lead",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              },
+              {
+                "type": "paragraph",
+                "variant": "body",
+                "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              }
+            ]
+          },
+          "image": {
+            "src": "/images/about/about-us.jpg",
+            "alt": "About Canvey Foot Clinic"
+          },
+          "owners": [
+            {
+              "name": "Toby",
+              "jobTitle": "Owner",
+              "image": {
+                "src": "/images/about/toby.jpg",
+                "alt": "Toby"
+              }
+            },
+            {
+              "name": "Rebecca",
+              "jobTitle": "Owner",
+              "image": {
+                "src": "/images/about/rebecca.jpg",
+                "alt": "Rebecca"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "meta": {
+          "name": "services",
+          "id": "services",
+          "showInNav": true,
+          "navLabel": "Services",
+          "isDark": true
+        },
+        "content": {
+          "title": "Our services",
+          "text": "Professional foot care to help keep your feet comfortable, healthy, and well cared for.",
+          "cards": [
+            {
+              "title": "Nail Care",
+              "image": {
+                "src": "/images/services/nail-care.jpg",
+                "alt": "Foot health practitioner providing nail care treatment"
+              },
+              "text": "Treatment for thickened, damaged, or hard-to-manage nails."
+            },
+            {
+              "title": "Corn and Callus Removal",
+              "image": {
+                "src": "/images/services/corn-callus-removal.jpg",
+                "alt": "Foot care treatment for corn and callus removal"
+              },
+              "text": "Relief from painful pressure points and hard skin build-up."
+            },
+            {
+              "title": "General Foot Care",
+              "image": {
+                "src": "/images/services/general-foot-care.jpg",
+                "alt": "Routine professional foot care treatment"
+              },
+              "text": "Routine care to help maintain comfort and good foot health."
+            }
+          ]
+        }
+      },
+      {
+        "meta": {
+          "name": "location",
+          "id": "location",
+          "showInNav": true,
+          "navLabel": "Location"
+        },
+        "content": {
+          "title": "Our location",
+          "text": "Conveniently located on Canvey Island, with easy access and parking.",
+          "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1653.8382864834514!2d0.595208749848519!3d51.522309372724294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8da9a3defc93b%3A0x1be8f3d5bfcb6d6!2s82%20High%20St%2C%20Canvey%20Island%20SS8%207SQ!5e1!3m2!1sen!2suk!4v1774906498872!5m2!1sen!2suk"
+        }
+      },
+      {
+        "meta": {
+          "name": "contact",
+          "id": "contact",
+          "showInNav": true,
+          "navLabel": "Contact"
+        },
+        "content": {
+          "title": "Get in touch",
+          "text": "Book an appointment or send us a message and we'll get back to you as soon as possible.",
+          "form": {
+            "fields": [
+              {
+                "name": "name",
+                "label": "Your name",
+                "type": "text",
+                "required": true
+              },
+              {
+                "name": "phone",
+                "label": "Phone number",
+                "type": "tel",
+                "required": true
+              },
+              {
+                "name": "email",
+                "label": "Email address",
+                "type": "email",
+                "required": true
+              },
+              {
+                "name": "message",
+                "label": "Message",
+                "type": "textarea",
+                "required": true
+              }
+            ],
+            "submitLabel": "Send message"
+          }
+        }
+      }
+    ]
+  }
+]
