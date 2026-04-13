@@ -1,9 +1,14 @@
 /* Base styles for the application, including typography and global element styles. */
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     font-family: "Inter", serif;
     background: var(--color-brand-surface);
     color: var(--color-brand-blue);
+    @apply text-sm xs:text-base;
   }
 
   address {
@@ -11,11 +16,11 @@
   }
 
   a {
-    @apply underline;
+    @apply no-underline;
   }
 
   a:hover,
   a:focus-visible {
-    @apply no-underline;
+    @apply underline;
   }
 }

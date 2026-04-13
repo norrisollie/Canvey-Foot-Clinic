@@ -1,0 +1,13 @@
+@layer components {
+  .footer {
+    @apply flex justify-center w-full bg-brand-blue text-white py-12;
+  }
+
+  .footer-column {
+    @apply col-span-full sm:col-span-1;
+  }
+
+  .footer-column--copyright {
+    @apply col-span-full text-center border-t border-white/10 pt-12;
+  }
+}

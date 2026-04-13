@@ -1,15 +1,15 @@
 import Logo from "../Header/Logo";
 import Nav from "../Header/Nav";
 
-function HeaderLogoNav({ toggleMobileNav }) {
+function HeaderLogoNav() {
+  console.log("Rendering component: header-logo-nav");
+
   return (
-    <header className="flex flex-col w-full justify-center items-center sticky top-0 z-50 bg-brand-surface/50 backdrop-blur-md">
+    <header className="header-logo-nav">
       <div className="section-inner-container flex items-center justify-between py-4.5">
         <Logo />
         <Nav />
-        <button className="sm:hidden" onClick={toggleMobileNav}>
-          Menu
-        </button>
+        <button className="sm:hidden">Menu</button>
       </div>
     </header>
   );

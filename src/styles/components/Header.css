@@ -1,0 +1,25 @@
+@layer components {
+  .header__logo {
+    @apply font-bold text-2xl leading-none;
+  }
+
+  .contact-bar {
+    @apply bg-brand-blue text-white w-full hidden sm:flex;
+  }
+
+  .contact-bar--item {
+    @apply w-fit;
+  }
+
+  .header-logo-nav {
+    @apply flex flex-col w-full justify-center items-center sticky top-0 z-50 bg-brand-surface/50 backdrop-blur-md border-b border-brand-blue/10;
+  }
+
+  .header__nav {
+    @apply hidden sm:flex;
+  }
+
+  .mobile-nav {
+    @apply sm:hidden fixed top-0 left-0 w-screen h-screen bg-white;
+  }
+}

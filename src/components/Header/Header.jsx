@@ -1,11 +1,13 @@
-import HeaderContactBar from "../Header/HeaderContactBar";
+import ContactBar from "./ContactBar";
 import HeaderLogoNav from "../Header/HeaderLogoNav";
 
-function Header({ toggleMobileNav }) {
+function Header() {
+  console.log("Rendering component: header");
+
   return (
     <>
-      <HeaderContactBar />
-      <HeaderLogoNav toggleMobileNav={toggleMobileNav} />
+      <ContactBar />
+      <HeaderLogoNav />
     </>
   );
 }

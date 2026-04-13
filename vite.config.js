@@ -11,5 +11,10 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react(), tailwindcss()],
     base: env.VITE_PUBLIC_BASE || "/",
+    test: {
+      globals: true,
+      environment: "jsdom",
+      setupFiles: "./src/test/setup.js",
+    },
   };
 });

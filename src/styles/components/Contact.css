@@ -1,0 +1,5 @@
+@layer components {
+  .section--contact {
+    @apply flex items-center justify-center;
+  }
+}

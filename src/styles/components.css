@@ -1,15 +1,13 @@
-/* This file defines custom component styles using Tailwind's @layer directive. */
-@layer components {
-  .cta {
-    /* Base styles for the call-to-action button. */
-    @apply py-3 px-6 rounded-md duration-300;
-  }
-
-  .cta--primary {
-    @apply bg-brand-blue text-white hover:bg-brand-blue-hover;
-  }
-
-  .cta--secondary {
-    @apply bg-transparent border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white;
-  }
-}
+/* Import hub for component-level styles. */
+@import "./components/Cta.css";
+@import "./components/Header.css";
+@import "./components/Section.css";
+@import "./components/Hero.css";
+@import "./components/About.css";
+@import "./components/Services.css";
+@import "./components/Location.css";
+@import "./components/Contact.css";
+@import "./components/Card.css";
+@import "./components/Loader.css";
+@import "./components/Error.css";
+@import "./components/Footer.css";

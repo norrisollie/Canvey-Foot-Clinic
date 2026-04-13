@@ -1,0 +1,21 @@
+@layer components {
+  .card {
+    @apply p-5 border rounded-lg bg-white text-brand-blue flex flex-col items-center text-center gap-2;
+  }
+
+  .card__icon {
+    @apply mb-1 text-3xl;
+  }
+
+  .card__title {
+    @apply text-xl font-bold;
+  }
+
+  .card__text {
+    @apply text-sm sm:text-base;
+  }
+
+  .card__cta {
+    @apply mt-2;
+  }
+}

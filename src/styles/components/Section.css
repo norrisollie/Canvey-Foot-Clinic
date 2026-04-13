@@ -1,0 +1,25 @@
+@layer components {
+  .section--dark {
+    @apply bg-brand-blue text-white;
+  }
+
+  .section__title {
+    @apply text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 text-brand-blue capitalize;
+  }
+
+  .section--dark .section__title {
+    @apply text-white;
+  }
+
+  .section__text {
+    @apply text-sm sm:text-base md:text-lg mb-8 text-brand-blue;
+  }
+
+  .section--dark .section__text {
+    @apply text-white;
+  }
+
+  .section-wrapper {
+    @apply w-full py-12;
+  }
+}

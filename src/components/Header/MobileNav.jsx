@@ -1,6 +1,8 @@
 const links = ["Home", "About", "Services", "Contact"];
 
 function MobileNav({ toggleMobileNav }) {
+  console.log("Rendering component: mobile-nav");
+
   const linkElements = links.map((link) => {
     return (
       <a href="#" key={link}>
@@ -10,7 +12,7 @@ function MobileNav({ toggleMobileNav }) {
   });
 
   return (
-    <nav className="sm:hidden fixed top-0 left-0 w-screen h-screen bg-white">
+    <nav className="mobile-nav">
       <div className="w-full h-full flex flex-col ">
         <div className="p-6 flex justify-end">
           <button

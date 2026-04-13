@@ -1,0 +1,5 @@
+@layer components {
+  .section--hero {
+    @apply h-[calc(100vh-160px)] flex items-center justify-center text-center;
+  }
+}

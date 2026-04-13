@@ -1,0 +1,13 @@
+@layer components {
+  .cta {
+    @apply inline-flex items-center justify-center p-2.5 rounded-md cursor-pointer transition-colors duration-300 ease-in-out;
+  }
+
+  .cta--primary {
+    @apply bg-brand-blue text-white hover:bg-brand-blue-hover;
+  }
+
+  .cta--secondary {
+    @apply border-2 border-brand-blue bg-brand-surface text-brand-blue hover:bg-brand-blue-hover hover:border-brand-blue-hover hover:text-white;
+  }
+}

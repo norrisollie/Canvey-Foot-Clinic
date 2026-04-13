@@ -1,39 +1,39 @@
-import { content } from "../../../web-data";
-import Section from "../Section";
+import { useSiteContent } from "../../../hooks/useSiteContent";
+import Section from "../Section/Section";
 
 function Hero() {
-  const heroSection = content.pages?.home?.sections?.find(
-    (section) => section.id === "hero",
-  );
+  const { getSectionByName } = useSiteContent();
+  const meta = getSectionByName("hero")?.meta ?? {};
+  const content = getSectionByName("hero")?.content ?? {};
 
-  if (!heroSection) return null;
+  const { name = "hero", element = "section", id = "hero" } = meta;
+  const { title = "", subtitle = "", ctas = [] } = content;
 
-  const { id, payload = {} } = heroSection;
-  const { title, subtitle, cta = [] } = payload;
+  console.log(`Rendering component: ${name}`);
 
   return (
-    <Section
-      id={id}
-      className="h-[calc(100vh-160px)] flex items-center justify-center"
-    >
-      <h1 className="text-6xl font-bold leading-none mb-1.5">{title}</h1>
-
+    <Section wrapperElement={element} id={id} className="section--hero">
+      <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-pre-line font-bold leading-none mb-3">
+        {title}
+      </h1>
       <p className="mb-4 text-md">{subtitle}</p>
 
-      {cta.length > 0 && (
-        <div className="flex gap-4">
-          {cta.map((ctaText, index) => (
-            <button
-              key={`cta-${index}`}
-              className={
-                index === 0
-                  ? "bg-brand-blue text-white p-2.5 rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-brand-blue-hover"
-                  : "border-2 border-brand-blue bg-brand-surface text-brand-blue p-2.5 rounded-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-brand-blue-hover hover:border-brand-blue-hover hover:text-white"
-              }
-            >
-              {ctaText}
-            </button>
-          ))}
+      {ctas.length > 0 && (
+        <div className="flex gap-4 justify-center">
+          {ctas.map((cta, index) => {
+            const { label, href } = cta;
+            return (
+              <button
+                key={`cta-${index}`}
+                onClick={() => (window.location.href = href)}
+                className={
+                  index === 0 ? "cta cta--primary" : "cta cta--secondary"
+                }
+              >
+                {label}
+              </button>
+            );
+          })}
         </div>
       )}
     </Section>

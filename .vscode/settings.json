@@ -1,9 +1,0 @@
-{
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  "tailwindCSS.experimental.configFile": "src/index.css",
-  "editor.quickSuggestions": {
-    "strings": "on"
-  }
-}

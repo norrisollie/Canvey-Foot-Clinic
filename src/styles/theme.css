@@ -3,4 +3,6 @@
   --color-brand-blue: #0c2d6b;
   --color-brand-blue-hover: #1f4a94;
   --color-brand-surface: #faf8f5;
+  --color-brand-grey: #4b5563;
+  --breakpoint-xs: 30rem;
 }

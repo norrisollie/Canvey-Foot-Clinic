@@ -1,0 +1,29 @@
+@layer components {
+  .section--about {
+    @apply w-full py-12;
+  }
+
+  .about__block-lead {
+    @apply section__text text-lg font-medium;
+  }
+
+  .about__block-body {
+    @apply section__text;
+  }
+
+  .about__owners-title {
+    @apply text-2xl sm:text-3xl font-semibold mb-6 text-brand-blue;
+  }
+
+  .about__owner-card {
+    @apply flex flex-col items-center text-center;
+  }
+
+  .about__owner-name {
+    @apply text-lg font-bold text-brand-blue;
+  }
+
+  .about__owner-title {
+    @apply text-sm text-brand-blue;
+  }
+}

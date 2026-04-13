@@ -1,32 +1,32 @@
-import { useState } from "react";
-import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import MobileNav from "./components/Header/MobileNav";
-import Hero from "./components/Sections/Hero/Hero";
+import SectionsRenderer from "./components/Sections/SectionRenderer";
+import Footer from "./components/Footer/Footer";
+import Loader from "./components/Loader/Loader";
+import Error from "./components/Error/Error";
+import { useSite } from "./hooks/useSite";
 
 function App() {
-  const [showMobileNav, setShowMobileNav] = useState(false);
+  console.log("Rendering component: app");
 
-  // handle toggle of mobile nav, toggles showMobileNav state between true and false
-  const toggleMobileNav = () => {
-    setShowMobileNav((prev) => !prev);
-  };
+  const shrinkHeader = false;
+
+  // custom hook to access site context, which provides loading and error states
+  const { loading, error } = useSite();
+
+  if (loading) {
+    return <Loader />;
+  }
+
+  if (error) {
+    return <Error message={error.message} />;
+  }
 
   return (
     <>
-      {
-        // show mobile nav if showMobileNav is true
-        showMobileNav && <MobileNav toggleMobileNav={toggleMobileNav} />
-      }
-      <main className="min-h-svh flex flex-col">
-        <Header toggleMobileNav={toggleMobileNav} />
-        <Hero />
+      <main className="main-wrapper">
+        <Header shrinkHeader={shrinkHeader} />
+        <SectionsRenderer />
         <Footer />
-        {/* <Section title="About Us">Section 2</Section>
-        <Section title="Services">Section 3</Section>
-        <Section title="Testimonials">Section 4</Section>
-        <Section title="Contact">Section 5</Section>
-        <Footer /> */}
       </main>
     </>
   );
