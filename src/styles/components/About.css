@@ -1,6 +1,6 @@
 @layer components {
   .section--about {
-    @apply w-full py-12;
+    @apply w-full py-12 flex flex-col items-center justify-center;
   }
 
   .about__block-lead {

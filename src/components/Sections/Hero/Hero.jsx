@@ -13,10 +13,10 @@ function Hero() {
 
   return (
     <Section wrapperElement={element} id={id} className="section--hero">
-      <h1 className="text-6xl whitespace-pre-line font-bold leading-none mb-3">
+      <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-pre-line font-bold leading-none mb-3">
         {title}
       </h1>
-      <p className="mb-4">{subtitle}</p>
+      <p className="mb-4 text-lg">{subtitle}</p>
 
       {ctas.length > 0 && (
         <div className="flex gap-4 justify-center">

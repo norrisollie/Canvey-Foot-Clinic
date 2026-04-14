@@ -8,15 +8,15 @@ function About() {
   const content = getSectionByName("about")?.content ?? {};
 
   const { name = "about", element = "section", id = "about" } = meta;
-  const { title = "", text = {}, image = {}, owners = [] } = content;
+  const { title = "", text = {}, image = {}, cards = [] } = content;
   const { blocks = [] } = text;
 
   console.log(`Rendering component: ${name}`);
 
   return (
     <Section wrapperElement={element} id={id} className="section--about">
-      <div className="w-full grid grid-cols-12">
-        <div className="col-span-6">
+      <div className="w-full grid grid-cols-12 gap-12">
+        <div className="col-span-6 flex flex-col justify-center">
           <h2 className="section__title">{title}</h2>
           <div>
             {blocks.map((block, index) => {
@@ -45,24 +45,30 @@ function About() {
               }
             })}
           </div>
-          <div className="owner-card-wrapper grid grid-cols-2 gap-6">
-            {owners.length > 0 &&
-              owners.map((owner, index) => {
-                const { name = "", role = "", image = {} } = owner;
+          <div className="owner-card-wrapper grid grid-cols-2 gap-6 mt-6">
+            {cards.length > 0 &&
+              cards.map((owner, index) => {
+                const { name = "", role = "", image = {}, icon = null } = owner;
                 const { src = "", alt = "" } = image;
+                const { alignment, direction, type } = owner;
                 return (
                   <Card
                     key={index}
                     title={name}
                     text={role}
+                    type={type ?? "owner"}
+                    alignment={alignment ?? "center"}
+                    direction={direction ?? "horizontal"}
+                    jobTitle={owner.jobTitle ?? ""}
                     image={{ src, alt }}
+                    icon={icon}
                   />
                 );
               })}
           </div>
         </div>
         <div className="col-span-6">
-          <div>image</div>
+          <div className="aspect-square bg-amber-50">image</div>
         </div>
       </div>
     </Section>

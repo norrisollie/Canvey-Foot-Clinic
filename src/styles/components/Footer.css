@@ -3,6 +3,10 @@
     @apply flex justify-center w-full bg-brand-blue text-white py-12;
   }
 
+  .footer.section-wrapper {
+    @apply bg-brand-blue;
+  }
+
   .footer-column {
     @apply col-span-full sm:col-span-1;
   }

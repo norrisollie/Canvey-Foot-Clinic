@@ -1,5 +1,5 @@
 @layer components {
   .section--location {
-    @apply h-[calc(100vh-160px)] flex items-center justify-center;
+    @apply flex items-center justify-center;
   }
 }

@@ -18,4 +18,28 @@
   .card__cta {
     @apply mt-2;
   }
+
+  .card--alignment-left {
+    @apply items-start text-left;
+  }
+
+  .card--alignment-right {
+    @apply items-end text-right;
+  }
+
+  .card--alignment-center {
+    @apply items-center text-center;
+  }
+
+  .card--direction-horizontal {
+    @apply flex-row;
+  }
+
+  .card--direction-horizontal .card__icon {
+    @apply mb-0 mr-4;
+  }
+
+  .card--direction-vertical {
+    @apply flex-col;
+  }
 }

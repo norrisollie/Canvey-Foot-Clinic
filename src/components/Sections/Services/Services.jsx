@@ -9,18 +9,14 @@ function Services() {
     sections.find((section) => section.meta?.name === "services") || {};
 
   const {
-    meta: { name = "services", id = "", element = "section", isDark } = {},
+    meta: { name = "services", id = "", element = "section" } = {},
     content: { title = "Default Title", text = "", cards = [] } = {},
   } = servicesSection;
 
   console.log(`Rendering component: ${name}`);
 
   return (
-    <Section
-      wrapperElement={element}
-      id={id}
-      className={`section--services ${isDark ? "section--dark" : ""}`}
-    >
+    <Section wrapperElement={element} id={id} className="section--services">
       <div className="w-full">
         <h2 className="section__title">{title}</h2>
         {text && <p className="section__text">{text}</p>}
@@ -33,6 +29,7 @@ function Services() {
                 text: cardText = "",
                 icon,
                 cta,
+                alignment = "center",
               } = card;
 
               return (
@@ -42,6 +39,7 @@ function Services() {
                   title={cardTitle}
                   text={cardText}
                   cta={cta}
+                  alignment={alignment}
                 />
               );
             })}

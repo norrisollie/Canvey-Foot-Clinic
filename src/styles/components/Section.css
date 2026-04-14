@@ -1,25 +1,21 @@
 @layer components {
-  .section--dark {
-    @apply bg-brand-blue text-white;
+  .section-wrapper:not(.footer) {
+    @apply w-full py-12 min-h-[calc(100vh-84px)];
+  }
+
+  .section-wrapper:nth-of-type(odd) {
+    @apply bg-brand-surface/50;
+  }
+
+  .section-wrapper:nth-of-type(even) {
+    @apply bg-brand-surface-alt;
   }
 
   .section__title {
     @apply text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 text-brand-blue capitalize;
   }
 
-  .section--dark .section__title {
-    @apply text-white;
-  }
-
   .section__text {
     @apply mb-8 text-brand-blue;
-  }
-
-  .section--dark .section__text {
-    @apply text-white;
-  }
-
-  .section-wrapper {
-    @apply w-full py-12;
   }
 }

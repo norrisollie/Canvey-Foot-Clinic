@@ -186,22 +186,21 @@
             "src": "/images/about/about-us.jpg",
             "alt": "About Canvey Foot Clinic"
           },
-          "owners": [
+          "cards": [
             {
+              "type": "owner",
               "name": "Toby",
+              "alignment": "left",
+              "direction": "horizontal",
               "jobTitle": "Owner",
-              "image": {
-                "src": "/images/about/toby.jpg",
-                "alt": "Toby"
-              }
+              "icon": "test"
             },
             {
+              "type": "owner",
               "name": "Rebecca",
+              "alignment": "left",
               "jobTitle": "Owner",
-              "image": {
-                "src": "/images/about/rebecca.jpg",
-                "alt": "Rebecca"
-              }
+              "icon": "test"
             }
           ]
         }
@@ -219,7 +218,9 @@
           "text": "Professional foot care to help keep your feet comfortable, healthy, and well cared for.",
           "cards": [
             {
+              "type": "service",
               "title": "Nail Care",
+              "alignment": "center",
               "image": {
                 "src": "/images/services/nail-care.jpg",
                 "alt": "Foot health practitioner providing nail care treatment"
@@ -227,15 +228,19 @@
               "text": "Treatment for thickened, damaged, or hard-to-manage nails."
             },
             {
+              "type": "service",
               "title": "Corn and Callus Removal",
               "image": {
                 "src": "/images/services/corn-callus-removal.jpg",
                 "alt": "Foot care treatment for corn and callus removal"
               },
+              "alignment": "center",
               "text": "Relief from painful pressure points and hard skin build-up."
             },
             {
+              "type": "service",
               "title": "General Foot Care",
+              "alignment": "center",
               "image": {
                 "src": "/images/services/general-foot-care.jpg",
                 "alt": "Routine professional foot care treatment"
