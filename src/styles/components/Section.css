@@ -1,6 +1,6 @@
 @layer components {
   .section-wrapper:not(.footer) {
-    @apply w-full py-12 min-h-[calc(100vh-84px)];
+    @apply w-full py-12 min-h-[calc(100vh-var(--header-height))];
   }
 
   .section-wrapper:nth-of-type(odd) {

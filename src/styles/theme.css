@@ -5,5 +5,6 @@
   --color-brand-surface: #faf8f5;
   --color-brand-surface-alt: #f7f4ee;
   --color-brand-grey: #4b5563;
+  --header-height: 94px;
   --breakpoint-xs: 30rem;
 }

@@ -136,7 +136,7 @@
       {
         "meta": {
           "name": "hero",
-          "id": "home",
+          "id": "hero",
           "showInNav": true,
           "navLabel": "Home"
         },
