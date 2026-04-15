@@ -18,4 +18,20 @@
   .section__text {
     @apply mb-8 text-brand-blue;
   }
+
+  .section__split-2col {
+    @apply w-full grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12;
+  }
+
+  .section__col-text {
+    @apply md:col-span-6 order-2 md:order-1 flex flex-col justify-center;
+  }
+
+  .section__col-media {
+    @apply md:col-span-6 order-1 md:order-2;
+  }
+
+  .section__media-placeholder {
+    @apply aspect-square bg-amber-50 rounded-lg overflow-hidden;
+  }
 }

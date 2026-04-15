@@ -36,8 +36,8 @@ function Contact() {
 
   return (
     <Section wrapperElement={element} id={id} className="section--contact">
-      <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-        <div className="md:col-span-6 order-2 md:order-1 flex flex-col justify-center">
+      <div className="section__split-2col">
+        <div className="section__col-text">
           <h2 className="section__title">{title}</h2>
           {text && <p className="section__text">{text}</p>}
 
@@ -91,8 +91,8 @@ function Contact() {
             </button>
           </form>
         </div>
-        <div className="md:col-span-6 order-1 md:order-2">
-          <div className="aspect-square bg-amber-50">image</div>
+        <div className="section__col-media">
+          <div className="section__media-placeholder">image</div>
         </div>
       </div>
     </Section>
