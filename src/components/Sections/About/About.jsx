@@ -8,15 +8,15 @@ function About() {
   const content = getSectionByName("about")?.content ?? {};
 
   const { name = "about", element = "section", id = "about" } = meta;
-  const { title = "", text = {}, image = {}, cards = [] } = content;
+  const { title = "", text = {}, cards = [] } = content;
   const { blocks = [] } = text;
 
   console.log(`Rendering component: ${name}`);
 
   return (
     <Section wrapperElement={element} id={id} className="section--about">
-      <div className="w-full grid grid-cols-12 gap-12">
-        <div className="col-span-6 flex flex-col justify-center">
+      <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+        <div className="md:col-span-6 order-2 md:order-1 flex flex-col justify-center">
           <h2 className="section__title">{title}</h2>
           <div>
             {blocks.map((block, index) => {
@@ -67,7 +67,7 @@ function About() {
               })}
           </div>
         </div>
-        <div className="col-span-6">
+        <div className="md:col-span-6 order-1 md:order-2">
           <div className="aspect-square bg-amber-50">image</div>
         </div>
       </div>
