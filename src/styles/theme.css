@@ -1,10 +1,14 @@
 /* Sets theme colors for the application. */
 @theme {
-  --color-brand-blue: #0c2d6b;
+  --color-brand-blue: #00236f;
+  --color-nav-link: #475569;
+
   --color-brand-blue-hover: #1f4a94;
   --color-brand-surface: #faf8f5;
   --color-brand-surface-alt: #f7f4ee;
   --color-brand-grey: #4b5563;
+
+  --container-site: 90rem;
   --header-height: 94px;
   --breakpoint-xs: 30rem;
 }

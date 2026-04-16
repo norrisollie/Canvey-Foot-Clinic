@@ -24,14 +24,18 @@
   }
 
   .section__col-text {
-    @apply md:col-span-6 order-2 md:order-1 flex flex-col justify-center;
+    @apply md:col-span-8 lg:col-span-6 order-2 md:order-1 flex flex-col justify-center;
+  }
+
+  .section__col-text p {
+    @apply text-justify;
   }
 
   .section__col-media {
-    @apply md:col-span-6 order-1 md:order-2;
+    @apply md:col-span-4 lg:col-span-6 order-1 md:order-2 flex items-center justify-center;
   }
 
   .section__media-placeholder {
-    @apply aspect-square bg-amber-50 rounded-lg overflow-hidden;
+    @apply w-full max-w-lg aspect-square bg-amber-50 rounded-lg overflow-hidden mx-auto;
   }
 }

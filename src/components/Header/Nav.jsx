@@ -18,7 +18,7 @@ function Nav() {
       <NavLink
         href={`#${rawLink}`}
         label={displayLink}
-        className="nav__link px-4 py-1.5 hover:bg-brand-blue hover:text-white rounded-full mr-1.5 last:mr-0 hover:no-underline"
+        className="nav__link"
         key={displayLink + index}
       />
     );

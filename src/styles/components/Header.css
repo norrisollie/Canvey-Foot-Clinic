@@ -3,6 +3,10 @@
     @apply font-bold text-2xl leading-none;
   }
 
+  .nav__link {
+    @apply text-nav-link px-4 py-1.5 rounded-full mr-1.5 last:mr-0 transition-colors hover:no-underline hover:text-brand-blue hover:bg-brand-blue/10 focus-visible:text-brand-blue focus-visible:bg-brand-blue/10;
+  }
+
   .contact-bar {
     @apply bg-brand-blue text-white w-full hidden sm:flex;
   }
@@ -16,7 +20,7 @@
   }
 
   .header__nav {
-    @apply hidden sm:flex;
+    @apply flex flex-wrap md:flex-nowrap items-center justify-center md:justify-end gap-2;
   }
 
   .mobile-nav {

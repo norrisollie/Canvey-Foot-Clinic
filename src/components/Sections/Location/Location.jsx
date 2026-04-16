@@ -1,21 +1,15 @@
-import { useSite } from "../../../hooks/useSite";
+import { useSiteContent } from "../../../hooks/useSiteContent";
 
 import Section from "../Section/Section";
 
 function Location() {
-  const { data: { sections } = [] } = useSite();
+  const { getSectionByName } = useSiteContent();
+  const meta = getSectionByName("location")?.meta ?? {};
+  const content = getSectionByName("location")?.content ?? {};
 
-  const locationSection =
-    sections.find((section) => section.meta?.name === "location") || {};
-
-  const {
-    meta: { name = "location", id = "", element = "section" } = {},
-    content: {
-      title = "Default Location Title",
-      text = "",
-      mapEmbedUrl = "",
-    } = {},
-  } = locationSection;
+  const { name = "location", id = "", element = "section" } = meta;
+  const { title = "", text = {}, mapEmbedUrl = "" } = content;
+  const { blocks = [] } = text;
 
   console.log(`Rendering component: ${name}`);
 
@@ -24,7 +18,35 @@ function Location() {
       <div className="section__split-2col">
         <div className="section__col-text">
           <h2 className="section__title">{title}</h2>
-          {text && <p className="section__text">{text}</p>}
+          <div>
+            {blocks.map((block, index) => {
+              const { type, variant, text } = block;
+
+              if (type === "paragraph") {
+                if (variant === "lead") {
+                  return (
+                    <p className="lead mb-4" key={index}>
+                      {text}
+                    </p>
+                  );
+                }
+
+                if (variant === "body") {
+                  return (
+                    <p className="mb-2.5" key={index}>
+                      {text}
+                    </p>
+                  );
+                }
+
+                console.warn(`Unknown paragraph variant: ${variant}`);
+                return null;
+              }
+
+              console.warn(`Unknown block type: ${type}`);
+              return null;
+            })}
+          </div>
         </div>
         <div className="section__col-media">
           <div className="section__media-placeholder">

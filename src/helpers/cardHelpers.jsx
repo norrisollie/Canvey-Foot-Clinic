@@ -56,7 +56,9 @@ const renderCardContentByType = (type, title, jobTitle, text) => {
     return (
       <>
         {title && <h3 className="card__title">{title}</h3>}
-        {jobTitle && <p className="card__job-title">{jobTitle}</p>}
+        {jobTitle && (
+          <p className="card__job-title font-bold text-xs">{jobTitle}</p>
+        )}
         {text && <p className="card__text">{text}</p>}
       </>
     );

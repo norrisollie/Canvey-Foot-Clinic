@@ -6,10 +6,9 @@ function HeaderLogoNav() {
 
   return (
     <header className="header-logo-nav">
-      <div className="section-inner-container flex items-center justify-between py-4.5">
+      <div className="section-inner-container flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 md:gap-0 py-4.5">
         <Logo />
         <Nav />
-        <button className="sm:hidden">Menu</button>
       </div>
     </header>
   );

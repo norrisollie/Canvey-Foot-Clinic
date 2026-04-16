@@ -4,6 +4,6 @@
   }
 
   .section-inner-container {
-    @apply max-w-7xl w-full px-6 xs:px-8 sm:px-12 mx-auto;
+    @apply max-w-site w-full px-6 xs:px-8 sm:px-12 mx-auto;
   }
 }

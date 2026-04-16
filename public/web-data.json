@@ -173,12 +173,17 @@
               {
                 "type": "paragraph",
                 "variant": "lead",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "text": "Toby and Becky recently took over The Foot Stop, continuing the work built by Richard Waddington. Their aim is simple: maintain the trust patients already have in the clinic while building on it with consistent, high-quality care."
               },
               {
                 "type": "paragraph",
                 "variant": "body",
-                "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                "text": "Both trained at the SMAE Institute, completing a structured programme covering theory, practical assessment, and clinical experience. This training gives them a solid grounding in treating common foot health conditions safely and effectively."
+              },
+              {
+                "type": "paragraph",
+                "variant": "body",
+                "text": "They are qualified Foot Health Practitioners, focused on preventative care, treatment, and clear, honest advice. Patients can expect a calm, friendly environment and a straightforward approach to keeping feet healthy."
               }
             ]
           },
@@ -192,14 +197,14 @@
               "name": "Toby",
               "alignment": "left",
               "direction": "horizontal",
-              "jobTitle": "Owner",
+              "jobTitle": "Foot Health Practitioner",
               "icon": "test"
             },
             {
               "type": "owner",
-              "name": "Rebecca",
+              "name": "Becky",
               "alignment": "left",
-              "jobTitle": "Owner",
+              "jobTitle": "Foot Health Practitioner",
               "icon": "test"
             }
           ]
@@ -259,7 +264,25 @@
         },
         "content": {
           "title": "Our location",
-          "text": "Conveniently located on Canvey Island, with easy access and parking.",
+          "text": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "variant": "lead",
+                "text": "Conveniently located on Canvey Island, with easy access and parking."
+              },
+              {
+                "type": "paragraph",
+                "variant": "body",
+                "text": "Free parking is available at the Knightswick Centre car park, approximately a 5-minute walk from the clinic, making it easy for those travelling by car."
+              },
+              {
+                "type": "paragraph",
+                "variant": "body",
+                "text": "Several bus routes serve the clinic directly. The 22, 27, and 27A all stop outside, while the 21 stops a short walk away, providing convenient access from the surrounding areas."
+              }
+            ]
+          },
           "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1653.8382864834514!2d0.595208749848519!3d51.522309372724294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8da9a3defc93b%3A0x1be8f3d5bfcb6d6!2s82%20High%20St%2C%20Canvey%20Island%20SS8%207SQ!5e1!3m2!1sen!2suk!4v1774906498872!5m2!1sen!2suk"
         }
       },

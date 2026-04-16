@@ -1,0 +1,19 @@
+.contact-bar__wrapper {
+  @apply bg-brand-blue text-white w-full hidden sm:flex;
+}
+
+.contact-bar__nav {
+  @apply w-full grid md:grid-cols-3 grid-cols-2 py-3.5 px-2.5 content-fit text-sm leading-4;
+}
+
+.contact-bar__item {
+  @apply w-fit flex items-center;
+}
+
+.contact-bar__item:first-child {
+  @apply justify-start;
+}
+
+.contact-bar__item:last-child {
+  @apply justify-end;
+}
