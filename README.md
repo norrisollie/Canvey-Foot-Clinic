@@ -1,86 +1,64 @@
-# Canvey Foot Clinic Website
+# Canvey Foot Clinic
 
-A responsive, component-driven front-end project for a local podiatry clinic. This build focuses on clear information hierarchy, approachable branding, and mobile-first usability for users looking for opening hours, contact details, and services.
+Responsive React + Vite website for a local foot health practitioner clinic, built to present services clearly and make it easy for patients to get in touch.
 
-## Portfolio Summary
+## Overview
 
-This project demonstrates:
+This project provides a mobile-first clinic website with reusable UI components, JSON-driven content, and a simple global data flow. It is structured as an MVP: solid enough to extend, with ongoing improvements planned around content, UX, and production readiness.
 
-- Building a modern React single-page interface with reusable components.
-- Using a central content model (`src/web-data.js`) to keep UI text and business data editable in one place.
-- Implementing responsive navigation patterns (desktop nav + full-screen mobile menu).
-- Creating a branded UI theme with Tailwind CSS v4 and custom design tokens.
+## Key Features
 
-## Current Features
-
-- Sticky header that includes desktop navigation links and a mobile menu toggle.
-- Contact utility bar showing email, phone, and address.
-- Full-screen mobile overlay navigation for small-screen devices.
-- Hero section rendered from content data, including CTA buttons.
-- Reusable `Section` component pattern for scalable page sections.
-- Footer with opening hours, current day highlighting (Europe/London), and contact links.
-- Local font loading (`Inter` variable font) via `@font-face`.
+- Responsive layout with mobile-first navigation
+- JSON-driven content from `public/web-data.json`
+- Reusable components including Section, Card, and section-specific views such as Hero, Services, and Contact
+- Context API for shared site data plus loading and error states
+- Semantic HTML to support accessibility and SEO
+- GitHub Pages deployment support via Vite base path configuration
 
 ## Tech Stack
 
 - React
 - Vite
 - Tailwind CSS v4
-- React Icons
-- ESLint (JS + React Hooks + React Refresh rules)
+- Context API
+- Vitest and Testing Library
+- ESLint
 
-## Project Structure
+## Development Notes
 
-Key files and folders:
-
-- `src/App.jsx`: App shell and mobile-nav state management.
-- `src/web-data.js`: Content and global clinic data source.
-- `src/components/Header/`: Header modules (logo, nav, contact bar, mobile nav).
-- `src/components/Sections/`: Reusable section components and hero implementation.
-- `src/components/Footer/Footer.jsx`: Footer layout and opening-hours rendering.
-- `src/index.css`: Tailwind import, theme tokens, and global base styles.
-- `src/fonts.css`: Local font-face declarations.
+- Page structure and content are controlled through `public/web-data.json`
+- Site data is loaded centrally through the context provider
+- The component structure is designed for reuse and straightforward section expansion
+- Vite base path configuration supports deployment to a subpath now and a custom domain later
 
 ## Running Locally
 
-Install dependencies:
-
 ```bash
 npm install
+npm run dev
 ```
 
-Start the development server:
+Available scripts:
 
 ```bash
-npx vite
+npm run build
+npm run preview
+npm run test
+npm run lint
 ```
 
-Create a production build:
+## Deployment
+
+The project is set up for static deployment with Vite. GitHub Pages is supported through the `base` setting in `vite.config.js`, which reads from `VITE_PUBLIC_BASE` when needed.
+
+Typical deployment flow:
 
 ```bash
-npx vite build
+npm run build
 ```
 
-Preview the production build locally:
+Deploy the generated `dist/` output to GitHub Pages using your preferred workflow or action.
 
-```bash
-npx vite preview
-```
+## Status
 
-## Why This Is A Strong Portfolio Piece
-
-- Shows practical UI architecture for a real business use case.
-- Demonstrates reusable, data-driven React component design.
-- Balances visual branding and functional accessibility for local-service users.
-- Leaves room for clear next-phase enhancements without rewriting core structure.
-
-## Suggested Next Iteration
-
-- Add service detail sections and real page anchors for nav links.
-- Connect CTA buttons to booking/contact flows.
-- Add image assets and SEO metadata for production readiness.
-- Introduce basic automated tests for critical UI rendering paths.
-
-## Author
-
-Built as a front-end portfolio project for Canvey Foot Clinic.
+MVP in active development. The current structure is stable and practical, with further improvements planned for content depth, polish, and deployment workflow.
