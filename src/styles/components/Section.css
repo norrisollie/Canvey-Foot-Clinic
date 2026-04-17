@@ -4,11 +4,11 @@
   }
 
   .section-wrapper:nth-of-type(odd) {
-    @apply bg-brand-surface/50;
+    @apply bg-[#FFFFFF];
   }
 
   .section-wrapper:nth-of-type(even) {
-    @apply bg-brand-surface-alt;
+    @apply bg-[#F2F5F9];
   }
 
   .section__title {

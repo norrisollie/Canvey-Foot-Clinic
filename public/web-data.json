@@ -142,7 +142,7 @@
         },
         "content": {
           "title": "Comfortable feet\nstart here.",
-          "subtitle": "Professional foot health care on Canvey from experienced foot health. practitioners.",
+          "subtitle": "Professional foot health care on Canvey from experienced foot health practitioners.",
           "ctas": [
             {
               "label": "Book Appointment",
@@ -173,17 +173,12 @@
               {
                 "type": "paragraph",
                 "variant": "lead",
-                "text": "Toby and Becky recently took over The Foot Stop, continuing the work built by Richard Waddington. Their aim is simple: maintain the trust patients already have in the clinic while building on it with consistent, high-quality care."
+                "text": "Toby and Becky are proud to continue the care previously provided at The Foot Stop by Richard Waddington."
               },
               {
                 "type": "paragraph",
                 "variant": "body",
                 "text": "Both trained at the SMAE Institute, completing a structured programme covering theory, practical assessment, and clinical experience. This training gives them a solid grounding in treating common foot health conditions safely and effectively."
-              },
-              {
-                "type": "paragraph",
-                "variant": "body",
-                "text": "They are qualified Foot Health Practitioners, focused on preventative care, treatment, and clear, honest advice. Patients can expect a calm, friendly environment and a straightforward approach to keeping feet healthy."
               }
             ]
           },
@@ -251,6 +246,16 @@
                 "alt": "Routine professional foot care treatment"
               },
               "text": "Routine care to help maintain comfort and good foot health."
+            },
+            {
+              "type": "service",
+              "title": "Verruca Treatment",
+              "alignment": "center",
+              "image": {
+                "src": "/images/services/verruca-treatment.jpg",
+                "alt": "Professional verruca treatment"
+              },
+              "text": "Effective treatment for verrucas, helping to alleviate discomfort and promote healing."
             }
           ]
         }

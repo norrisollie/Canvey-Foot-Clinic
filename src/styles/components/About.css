@@ -3,11 +3,11 @@
     @apply w-full py-12 flex flex-col items-center justify-center;
   }
 
-  .about__block-lead {
-    @apply mb-8 text-brand-blue font-medium;
+  .about__block--lead {
+    @apply mb-8 text-brand-blue font-bold text-lg;
   }
 
-  .about__block-body {
+  .about__block--body {
     @apply mb-8 text-brand-blue;
   }
 

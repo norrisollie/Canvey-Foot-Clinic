@@ -16,7 +16,7 @@
   }
 
   .header-logo-nav {
-    @apply flex flex-col w-full justify-center items-center sticky top-0 z-50 bg-brand-surface/50 backdrop-blur-md border-b border-brand-blue/10;
+    @apply flex flex-col w-full justify-center items-center sticky top-0 z-50 bg-white/50 backdrop-blur-md border-b border-brand-blue/10;
   }
 
   .header__nav {

@@ -13,13 +13,11 @@ function Hero() {
 
   return (
     <Section wrapperElement={element} id={id} className="section--hero">
-      <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl whitespace-pre-line font-bold leading-none mb-3">
-        {title}
-      </h1>
-      <p className="mb-4 text-lg">{subtitle}</p>
+      <h1 className="hero__title">{title}</h1>
+      <p className="hero__subtitle">{subtitle}</p>
 
       {ctas.length > 0 && (
-        <div className="flex gap-4 justify-center">
+        <div className="hero__cta-wrapper">
           {ctas.map((cta, index) => {
             const { label, href } = cta;
             return (

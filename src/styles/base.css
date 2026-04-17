@@ -8,11 +8,7 @@
     font-family: "Inter", serif;
     background: var(--color-brand-surface);
     color: var(--color-brand-blue);
-    @apply text-base;
-  }
-
-  p {
-    @apply text-base;
+    @apply text-sm md:text-base;
   }
 
   address {

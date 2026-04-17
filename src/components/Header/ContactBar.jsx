@@ -11,6 +11,8 @@ function ContactBar() {
 
   const contactElements = renderContactItems(items, global);
 
+  console.log(`Rendered contact elements:`, contactElements);
+
   return (
     <div className="contact-bar__wrapper">
       <div className="section-inner-container">

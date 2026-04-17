@@ -26,14 +26,20 @@ function About() {
                 if (variant === "lead") {
                   // Render lead paragraph
                   return (
-                    <p className="lead mb-4" key={index}>
+                    <p
+                      className="about__block about__block--lead mb-4"
+                      key={index}
+                    >
                       {text}
                     </p>
                   );
                 } else if (variant === "body") {
                   // Render body paragraph
                   return (
-                    <p className="mb-2.5" key={index}>
+                    <p
+                      className="about__block about__block--body mb-2.5"
+                      key={index}
+                    >
                       {text}
                     </p>
                   );

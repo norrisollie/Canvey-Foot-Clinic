@@ -34,6 +34,9 @@
   .card--direction-horizontal {
     @apply flex-row;
   }
+  .card--direction-horizontal p {
+    @apply text-left;
+  }
 
   .card--direction-horizontal .card__icon {
     @apply mb-0 mr-4;

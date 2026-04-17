@@ -29,7 +29,7 @@ function Card({
         // if there is an icon
         icon && (
           <div
-            className="card__icon h-full flex justify-center items-center"
+            className={`card__icon h-full flex justify-center items-center`}
             aria-hidden="true"
           >
             {

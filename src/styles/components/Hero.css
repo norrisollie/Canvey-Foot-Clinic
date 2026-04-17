@@ -2,4 +2,16 @@
   .section--hero {
     @apply flex items-center justify-center text-center;
   }
+
+  .hero__title {
+    @apply text-8xl mb-10 font-bold;
+  }
+
+  .hero__subtitle {
+    @apply mb-10 text-2xl text-[#444651];
+  }
+
+  .hero__cta-wrapper {
+    @apply flex gap-4 justify-center;
+  }
 }

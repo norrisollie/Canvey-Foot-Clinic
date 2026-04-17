@@ -1,6 +1,8 @@
+import { BsFillMapFill, BsTelephoneFill, BsEnvelopeFill } from "react-icons/bs";
+
 const renderContactItems = (items, global) => {
   // loop through items and render based on type
-  items.map((item, index) => {
+  const contactItems = items.map((item, index) => {
     const value = global[item];
     console.log(`Rendering contact item: ${item} with value: ${value}`);
 
@@ -11,21 +13,37 @@ const renderContactItems = (items, global) => {
 
       // render address
       return (
-        <address
-          key={index}
-          className="contact-bar__item flex items-center justify-end"
+        <div
+          className="contact-bar__item-wrapper flex items-center justify-end"
+          key={`div-${index}`}
         >
-          {addressString}
-        </address>
+          <BsFillMapFill className="mr-2" />
+          <address
+            key={`address-${index}`}
+            className="contact-bar__item flex items-center"
+          >
+            {addressString}
+          </address>
+        </div>
       );
 
       // if email
     } else if (item === "email") {
       // render email as mailto link
       return (
-        <a key={index} href={`mailto:${value}`} className="contact-bar__item">
-          {value}
-        </a>
+        <div
+          className="contact-bar__item-wrapper flex items-center"
+          key={`div-${index}`}
+        >
+          <BsEnvelopeFill className="mr-2" />
+          <a
+            key={`a-${index}`}
+            href={`mailto:${value}`}
+            className="contact-bar__item"
+          >
+            {value}
+          </a>
+        </div>
       );
     }
 
@@ -39,11 +57,23 @@ const renderContactItems = (items, global) => {
 
     // render phone number as tel link
     return (
-      <a key={index} href={`tel:${value}`} className="contact-bar__item">
-        {value}
-      </a>
+      <div
+        className="contact-bar__item-wrapper flex items-center"
+        key={`div-${index}`}
+      >
+        <BsTelephoneFill className="mr-2" />
+        <a
+          key={`a-${index}`}
+          href={`tel:${value}`}
+          className="contact-bar__item"
+        >
+          {value}
+        </a>
+      </div>
     );
   });
+
+  return contactItems;
 };
 
 export default renderContactItems;
