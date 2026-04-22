@@ -20,7 +20,7 @@
   }
 
   .card__text {
-    @apply text-card;
+    @apply text-sm sm:text-base leading-6 text-app-text;
   }
 
   .card__cta {

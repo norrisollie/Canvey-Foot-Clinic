@@ -4,11 +4,11 @@
   }
 
   .about__block--lead {
-    @apply mb-3 sm:mb-4 md:mb-5 text-lead;
+    @apply mb-3 sm:mb-4 md:mb-5 text-lg font-medium leading-7 text-app-text;
   }
 
   .about__block--body {
-    @apply mb-2 sm:mb-2.5 md:mb-3 text-body;
+    @apply mb-2 sm:mb-2.5 md:mb-3 text-sm md:text-base leading-7 text-app-text;
   }
 
   .about__owners-title {

@@ -24,7 +24,7 @@
   }
 
   .section__text {
-    @apply mb-8 text-body;
+    @apply mb-8 text-sm md:text-base leading-7 text-app-text;
   }
 
   .section__split-2col {
