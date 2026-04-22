@@ -1,6 +1,6 @@
 @layer components {
   .card {
-    @apply p-5 border rounded-lg bg-white text-brand-blue flex flex-col items-center text-center gap-2;
+    @apply p-5 rounded-lg border border-app-primary/10 bg-app-muted shadow-sm flex flex-col items-center text-center gap-2;
   }
 
   .card__icon {
@@ -8,11 +8,19 @@
   }
 
   .card__title {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold text-app-primary mb-1.5 leading-tight;
+  }
+
+  .card--owner .card__title {
+    @apply mb-0;
+  }
+
+  .card__title--service {
+    @apply min-h-14;
   }
 
   .card__text {
-    @apply text-sm sm:text-base;
+    @apply text-card;
   }
 
   .card__cta {

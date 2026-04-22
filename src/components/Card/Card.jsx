@@ -23,7 +23,7 @@ function Card({
 
   return (
     <article
-      className={`card ${className} ${alignmentClass} ${directionClass}`.trim()}
+      className={`card ${type ? `card--${type}` : ""} ${className} ${alignmentClass} ${directionClass}`.trim()}
     >
       {
         // if there is an icon
@@ -37,7 +37,7 @@ function Card({
               typeof icon === "string" ? (
                 // if the string is "test", render a placeholder circle
                 icon === "test" && (
-                  <div className="bg-brand-blue rounded-full w-10 h-10"></div>
+                  <div className="rounded-full w-10 h-10 bg-app-primary/20"></div>
                 )
               ) : // if there is an icon and is an object with src property
               icon?.src ? (
@@ -54,7 +54,7 @@ function Card({
         )
       }
       <div
-        className={`flex flex-col ${alignmentClass === "horizontal" && "items-start"} justify-center`}
+        className={`flex flex-col ${direction === "horizontal" ? "items-start" : ""} justify-center`}
       >
         {
           // Render content based on card type

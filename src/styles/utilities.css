@@ -6,4 +6,16 @@
   .section-inner-container {
     @apply max-w-site w-full px-6 xs:px-8 sm:px-12 mx-auto;
   }
+
+  .text-body {
+    @apply text-sm md:text-base leading-7 text-app-text;
+  }
+
+  .text-lead {
+    @apply text-lg font-medium leading-7 text-app-text;
+  }
+
+  .text-card {
+    @apply text-sm sm:text-base leading-6 text-app-text;
+  }
 }

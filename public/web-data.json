@@ -3,6 +3,7 @@
     "global": {
       "siteName": "Canvey Foot Clinic",
       "phone": "01268 683280",
+      "mobile": "07900 123456",
       "email": "enquiries@canveyfootclinic.co.uk",
       "bookingLink": "#contact",
       "address": {
@@ -141,8 +142,8 @@
           "navLabel": "Home"
         },
         "content": {
-          "title": "Comfortable feet\nstart here.",
-          "subtitle": "Professional foot health care on Canvey from experienced foot health practitioners.",
+          "title": "Comfortable feet<br>start here.",
+          "subtitle": "Professional foot health care on Canvey from experienced<br>foot health practitioners.",
           "ctas": [
             {
               "label": "Book Appointment",
@@ -158,6 +159,14 @@
             "alt": "Foot health practitioner with patient"
           }
         }
+      },
+      {
+        "meta": {
+          "name": "trust",
+          "id": "trust",
+          "showInNav": false
+        },
+        "content": {}
       },
       {
         "meta": {
@@ -178,7 +187,12 @@
               {
                 "type": "paragraph",
                 "variant": "body",
-                "text": "Both trained at the SMAE Institute, completing a structured programme covering theory, practical assessment, and clinical experience. This training gives them a solid grounding in treating common foot health conditions safely and effectively."
+                "text": "Both trained at the SMAE Institute, completing a structured programme covering theory, practical assessment, and clinical experience. This gives them a solid grounding in treating common foot health conditions safely and effectively."
+              },
+              {
+                "type": "paragraph",
+                "variant": "body",
+                "text": "Before retraining, Becky worked in care and social support, and Toby in the building trade. Together, they bring a practical, hands-on approach alongside a strong focus on patient care, creating a welcoming and professional environment for every visit."
               }
             ]
           },
@@ -215,11 +229,11 @@
         },
         "content": {
           "title": "Our services",
-          "text": "Professional foot care to help keep your feet comfortable, healthy, and well cared for.",
+          "text": "Professional foot care to keep your feet comfortable, healthy, and well looked after, with treatments tailored to your needs.",
           "cards": [
             {
               "type": "service",
-              "title": "Nail Care",
+              "title": "Nail<br>Treatment",
               "alignment": "center",
               "image": {
                 "src": "/images/services/nail-care.jpg",
@@ -229,7 +243,7 @@
             },
             {
               "type": "service",
-              "title": "Corn and Callus Removal",
+              "title": "Corn and<br>Callus Removal",
               "image": {
                 "src": "/images/services/corn-callus-removal.jpg",
                 "alt": "Foot care treatment for corn and callus removal"
@@ -239,7 +253,7 @@
             },
             {
               "type": "service",
-              "title": "General Foot Care",
+              "title": "General<br>Foot Care",
               "alignment": "center",
               "image": {
                 "src": "/images/services/general-foot-care.jpg",
@@ -249,13 +263,23 @@
             },
             {
               "type": "service",
-              "title": "Verruca Treatment",
+              "title": "Verruca<br>Treatment",
               "alignment": "center",
               "image": {
                 "src": "/images/services/verruca-treatment.jpg",
                 "alt": "Professional verruca treatment"
               },
               "text": "Effective treatment for verrucas, helping to alleviate discomfort and promote healing."
+            }
+          ],
+          "ctas": [
+            {
+              "label": "Book Appointment",
+              "href": "#contact"
+            },
+            {
+              "label": "01268 683280",
+              "href": "tel:01268683280"
             }
           ]
         }
@@ -268,23 +292,36 @@
           "navLabel": "Location"
         },
         "content": {
-          "title": "Our location",
+          "title": "Find us",
+          "cards": [
+            {
+              "type": "location",
+              "alignment": "left",
+              "direction": "horizontal",
+              "title": "Address",
+              "text": "82 High Street, Canvey Island, Essex, SS8 7SQ"
+            },
+            {
+              "type": "location",
+              "alignment": "left",
+              "direction": "horizontal",
+              "title": "Parking",
+              "text": "Parking available at Knightswick Centre car park, just a short walk from the clinic."
+            },
+            {
+              "type": "location",
+              "alignment": "left",
+              "direction": "horizontal",
+              "title": "Public Transport",
+              "text": "Easily accessible by bus, with the 22 and 27 stopping outside and the 21 just a short walk away."
+            }
+          ],
           "text": {
             "blocks": [
               {
                 "type": "paragraph",
                 "variant": "lead",
-                "text": "Conveniently located on Canvey Island, with easy access and parking."
-              },
-              {
-                "type": "paragraph",
-                "variant": "body",
-                "text": "Free parking is available at the Knightswick Centre car park, approximately a 5-minute walk from the clinic, making it easy for those travelling by car."
-              },
-              {
-                "type": "paragraph",
-                "variant": "body",
-                "text": "Several bus routes serve the clinic directly. The 22, 27, and 27A all stop outside, while the 21 stops a short walk away, providing convenient access from the surrounding areas."
+                "text": "We’re based in Canvey town centre, making the clinic easy to find and convenient to reach. Whether you’re visiting by car or public transport, there are simple options nearby to get to us without hassle."
               }
             ]
           },
@@ -300,7 +337,33 @@
         },
         "content": {
           "title": "Get in touch",
-          "text": "Book an appointment or send us a message and we'll get back to you as soon as possible.",
+          "text": "To book an appointment, give us a call or send us a message and we’ll get back to you as soon as possible to arrange a time that suits you. If you have any questions about treatments or availability, feel free to get in touch and we’ll be happy to help.",
+          "cards": [
+            {
+              "type": "location",
+              "alignment": "left",
+              "direction": "horizontal",
+              "title": "Email",
+              "source": "email",
+              "text": "enquiries@canveyfootclinic.co.uk"
+            },
+            {
+              "type": "location",
+              "alignment": "left",
+              "direction": "horizontal",
+              "title": "Phone",
+              "source": "phone",
+              "text": "01268 683280"
+            },
+            {
+              "type": "location",
+              "alignment": "left",
+              "direction": "horizontal",
+              "title": "Text / Message",
+              "source": "mobile",
+              "text": "07900 123456"
+            }
+          ],
           "form": {
             "fields": [
               {

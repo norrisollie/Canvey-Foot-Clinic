@@ -14,7 +14,7 @@ const renderContactItems = (items, global) => {
       // render address
       return (
         <div
-          className="contact-bar__item-wrapper flex items-center justify-end"
+          className="contact-bar__item-wrapper hidden xl:flex items-center justify-end"
           key={`div-${index}`}
         >
           <BsFillMapFill className="mr-2" />
@@ -29,10 +29,9 @@ const renderContactItems = (items, global) => {
 
       // if email
     } else if (item === "email") {
-      // render email as mailto link
       return (
         <div
-          className="contact-bar__item-wrapper flex items-center"
+          className="contact-bar__item-wrapper hidden md:flex items-center"
           key={`div-${index}`}
         >
           <BsEnvelopeFill className="mr-2" />

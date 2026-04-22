@@ -43,20 +43,21 @@ function Contact() {
 
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-4"
-            noValidate
+            className="flex flex-col gap-4 bg-app-primary/10 p-6 rounded-3xl border border-app-primary/10 shadow-sm"
+            action="https://formspree.io/f/xgopdrnq"
+            method="POST"
           >
             {fields.map((field) => {
               const { name: fieldName, label, type, required } = field;
               const inputClass =
-                "w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue";
+                "w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-sm focus:outline-none focus:ring-2";
 
               return (
                 <div key={fieldName} className="flex flex-col gap-1">
                   <label htmlFor={fieldName} className="text-sm font-medium">
                     {label}
                     {required && (
-                      <span className="text-brand-blue ml-1" aria-hidden="true">
+                      <span className=" ml-1" aria-hidden="true">
                         *
                       </span>
                     )}
@@ -86,13 +87,16 @@ function Contact() {
               );
             })}
 
-            <button type="submit" className="cta cta--primary self-start mt-2">
+            <button
+              type="submit"
+              className="cta cta--primary cta--is-full-width mt-2"
+            >
               {submitLabel}
             </button>
           </form>
         </div>
         <div className="section__col-media">
-          <div className="section__media-placeholder">image</div>
+          {/* cards with contact info to be added here */}
         </div>
       </div>
     </Section>

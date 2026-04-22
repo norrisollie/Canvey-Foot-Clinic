@@ -1,12 +1,16 @@
 /* Sets theme colors for the application. */
 @theme {
-  --color-brand-blue: #00236f;
-  --color-nav-link: #475569;
+  /* --- Base colour tokens --- */
+  --color-app-blue: #00236f;
+  --color-app-white: #ffffff;
+  --color-app-off-white: #f8f9fa;
+  --color-app-grey: #444651;
 
-  --color-brand-blue-hover: #1f4a94;
-  --color-brand-surface: #faf8f5;
-  --color-brand-surface-alt: #f7f4ee;
-  --color-brand-grey: #4b5563;
+  /* --- Semantic aliases (Tailwind generates text-app-primary, bg-app-surface etc.) --- */
+  --color-app-primary: #00236f; /* brand blue; logos, headings, accents */
+  --color-app-text: #444651; /* default body text colour */
+  --color-app-surface: #ffffff; /* default section/page background */
+  --color-app-muted: #f8f9fa; /* alternate/off-white section background */
 
   --container-site: 90rem;
   --header-height: 94px;

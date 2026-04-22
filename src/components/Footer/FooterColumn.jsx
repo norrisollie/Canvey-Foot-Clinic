@@ -31,7 +31,7 @@ function FooterColumn({ data }) {
 
     return (
       <div className="footer-column">
-        <h3 className="text-2xl font-bold mb-1.5 text-brand">{data.title}</h3>
+        <h3 className="text-2xl font-bold mb-1.5 text">{data.title}</h3>
         <div>{items}</div>
       </div>
     );
@@ -39,7 +39,7 @@ function FooterColumn({ data }) {
 
   return (
     <div className="footer-column">
-      <h3 className="text-2xl font-bold mb-1.5 text-brand">{data.title}</h3>
+      <h3 className="text-2xl font-bold mb-1.5 ">{data.title}</h3>
       <div>{data.text}</div>
     </div>
   );

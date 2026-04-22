@@ -1,10 +1,6 @@
 @layer components {
   .footer {
-    @apply flex justify-center w-full bg-brand-blue text-white py-12;
-  }
-
-  .footer.section-wrapper {
-    @apply bg-brand-blue;
+    @apply flex justify-center w-full text-white py-12 bg-app-primary;
   }
 
   .footer-column {

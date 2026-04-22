@@ -4,7 +4,7 @@
   }
 
   .hero__title {
-    @apply text-8xl mb-10 font-bold;
+    @apply text-8xl mb-10 font-bold text-app-primary;
   }
 
   .hero__subtitle {

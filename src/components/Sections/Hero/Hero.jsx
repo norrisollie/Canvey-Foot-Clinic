@@ -13,8 +13,14 @@ function Hero() {
 
   return (
     <Section wrapperElement={element} id={id} className="section--hero">
-      <h1 className="hero__title">{title}</h1>
-      <p className="hero__subtitle">{subtitle}</p>
+      <h1
+        className="hero__title text-[min(11vw,var(--text-8xl))] leading-[0.9] tracking-tight"
+        dangerouslySetInnerHTML={{ __html: title }}
+      ></h1>
+      <p
+        className="hero__subtitle text-[min(3vw,var(--text-xl))]"
+        dangerouslySetInnerHTML={{ __html: subtitle }}
+      ></p>
 
       {ctas.length > 0 && (
         <div className="hero__cta-wrapper">

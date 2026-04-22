@@ -4,11 +4,11 @@
   }
 
   .nav__link {
-    @apply text-nav-link px-4 py-1.5 rounded-full mr-1.5 last:mr-0 transition-colors hover:no-underline hover:text-brand-blue hover:bg-brand-blue/10 focus-visible:text-brand-blue focus-visible:bg-brand-blue/10;
+    @apply px-5 py-2 rounded-full mr-1.5 last:mr-0 transition-colors hover:no-underline hover:bg-app-primary/10 hover:text-app-primary;
   }
 
   .contact-bar {
-    @apply bg-brand-blue text-white w-full hidden sm:flex;
+    @apply text-white w-full hidden sm:flex;
   }
 
   .contact-bar--item {
@@ -16,7 +16,7 @@
   }
 
   .header-logo-nav {
-    @apply flex flex-col w-full justify-center items-center sticky top-0 z-50 bg-white/50 backdrop-blur-md border-b border-brand-blue/10;
+    @apply flex flex-col w-full justify-center items-center sticky top-0 z-50 bg-white/50 backdrop-blur-md border-b border-app-primary/10;
   }
 
   .header__nav {

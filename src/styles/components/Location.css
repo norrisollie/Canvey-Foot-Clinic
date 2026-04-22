@@ -2,4 +2,8 @@
   .section--location {
     @apply flex items-center justify-center;
   }
+
+  .section--location .section__cards {
+    @apply flex flex-col gap-6 mt-6;
+  }
 }

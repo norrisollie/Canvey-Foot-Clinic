@@ -1,14 +1,23 @@
 @layer components {
   .cta {
-    @apply inline-flex items-center justify-center p-2.5 rounded-md cursor-pointer transition-colors duration-300 ease-in-out px-8 py-4 font-bold;
+    @apply inline-flex items-center justify-center p-2.5 rounded-md cursor-pointer transition-all duration-300 ease-in-out px-8 py-4 font-bold relative overflow-hidden;
   }
 
   .cta--primary {
     @apply bg-[linear-gradient(90deg,#00236F_0%,#1E3A8A_100%)] text-white;
   }
 
+  .cta--primary::before {
+    content: "";
+    @apply absolute inset-0 bg-white/8 opacity-0 transition-opacity duration-300 ease-in-out pointer-events-none;
+  }
+
+  .cta--primary:hover::before {
+    @apply opacity-100;
+  }
+
   .cta--secondary {
-    @apply bg-white text-brand-blue border border-brand-blue;
+    @apply bg-app-muted border border-app-primary/10 text-app-primary hover:brightness-95;
   }
 
   .cta--is-full-width {

@@ -55,7 +55,12 @@ const renderCardContentByType = (type, title, jobTitle, text) => {
     );
     return (
       <>
-        {title && <h3 className="card__title">{title}</h3>}
+        {title && (
+          <h3
+            className="card__title"
+            dangerouslySetInnerHTML={{ __html: title ?? "" }}
+          ></h3>
+        )}
         {jobTitle && (
           <p className="card__job-title font-bold text-xs">{jobTitle}</p>
         )}
@@ -63,11 +68,30 @@ const renderCardContentByType = (type, title, jobTitle, text) => {
       </>
     );
   }
-  console.log(`Rendering default card with title: ${title}, text: ${text}`);
+
+  if (type === "location") {
+    console.log(`Rendering location card with title: ${title}, text: ${text}`);
+    return (
+      <>
+        {title && (
+          <h3
+            className="card__title card__title--location"
+            dangerouslySetInnerHTML={{ __html: title ?? "" }}
+          ></h3>
+        )}
+        {text && <p className="card__text card__text--location">{text}</p>}
+      </>
+    );
+  }
 
   return (
     <>
-      {title && <h3 className="card__title card__title--service">{title}</h3>}
+      {title && (
+        <h3
+          className="card__title card__title--service"
+          dangerouslySetInnerHTML={{ __html: title ?? "" }}
+        ></h3>
+      )}
       {text && <p className="card__text card__text--service">{text}</p>}
     </>
   );

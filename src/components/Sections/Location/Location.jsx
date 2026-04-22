@@ -1,6 +1,8 @@
 import { useSiteContent } from "../../../hooks/useSiteContent";
+import renderCardElements from "../../Card/renderCardElements";
 
 import Section from "../Section/Section";
+import renderTextItems from "../renderTextItems";
 
 function Location() {
   const { getSectionByName } = useSiteContent();
@@ -8,45 +10,25 @@ function Location() {
   const content = getSectionByName("location")?.content ?? {};
 
   const { name = "location", id = "", element = "section" } = meta;
-  const { title = "", text = {}, mapEmbedUrl = "" } = content;
+  const { title = "", text = {}, cards = [], mapEmbedUrl = "" } = content;
   const { blocks = [] } = text;
+  const textBlocksClassName = `section__text-blocks section__text-blocks--${name}`;
+  const textItems = renderTextItems({ blocks, sectionName: name });
 
   console.log(`Rendering component: ${name}`);
+
+  const cardElements = renderCardElements(cards);
+  console.log(
+    `Rendered ${cardElements.length} card elements for section: ${name}`,
+  );
 
   return (
     <Section wrapperElement={element} id={id} className="section--location">
       <div className="section__split-2col">
         <div className="section__col-text">
           <h2 className="section__title">{title}</h2>
-          <div>
-            {blocks.map((block, index) => {
-              const { type, variant, text } = block;
-
-              if (type === "paragraph") {
-                if (variant === "lead") {
-                  return (
-                    <p className="lead mb-4" key={index}>
-                      {text}
-                    </p>
-                  );
-                }
-
-                if (variant === "body") {
-                  return (
-                    <p className="mb-2.5" key={index}>
-                      {text}
-                    </p>
-                  );
-                }
-
-                console.warn(`Unknown paragraph variant: ${variant}`);
-                return null;
-              }
-
-              console.warn(`Unknown block type: ${type}`);
-              return null;
-            })}
-          </div>
+          <div className={textBlocksClassName}>{textItems}</div>
+          <div className="section__cards">{cardElements}</div>
         </div>
         <div className="section__col-media">
           <div className="section__media-placeholder">
